@@ -1,24 +1,22 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f7f9fc; /* Very light gray/blue background */
+  background-color: #f7f9fc; 
   margin: 0;
   padding: 0;
   color: #333;
 }
-
 /* Main container with padding */
 .App {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  background-color: #f0f8ff; /* Soft light blue */
+  background-color: #f0f8ff; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-
 /* Card styling for form and list */
 .card {
   background-color: white;
@@ -38,11 +36,10 @@ body {
 h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #0077b6; /* Deep blue for headings */
+  color: #0077b6; 
   margin-bottom: 40px;
   text-align: center;
 }
-
 /* Form input styling */
 .form-group label {
   font-weight: 500;
@@ -59,11 +56,10 @@ h1 {
 }
 
 .form-group input:focus {
-  border-color: #00b4d8; /* Bright teal for focus */
+  border-color: #00b4d8; 
   outline: none;
   box-shadow: 0 0 5px rgba(0, 180, 216, 0.25);
 }
-
 /* Buttons: Sleek and modern */
 button {
   height: 45px;
@@ -85,9 +81,8 @@ button:focus {
   outline: none;
 }
 
-/* Primary button color */
 .btn-primary {
-  background-color: #0077b6; /* Deep blue */
+  background-color: #0077b6; 
   color: white;
 }
 
@@ -95,7 +90,6 @@ button:focus {
   background-color: #005f99;
 }
 
-/* Edit and Delete button styles */
 .btn-outline-info {
   border: 1px solid #00b4d8;
   color: #00b4d8;
@@ -116,18 +110,16 @@ button:focus {
   color: white;
 }
 
-/* Price badge alignment: aligned to the right and styled */
 .price-badge {
-  font-size: 1.0rem;  /* Further increased font size */
+  font-size: 1.0rem;  
   color: white;
   background-color: #0077b6;
-  padding: 0.5rem 1rem; /* Larger padding for a bigger badge */
-  border-radius: 12px; /* Slightly more rounded for a smoother look */
+  padding: 0.5rem 1rem; 
+  border-radius: 12px; 
   white-space: nowrap;
-  margin-left: auto; /* Pushes the price to the far right */
+  margin-left: auto; 
 }
 
-/* Ensures the flexbox layout works with proper spacing */
 .list-group-item {
   display: flex;
   justify-content: space-between;
@@ -149,10 +141,9 @@ button:focus {
 }
 
 .list-group-item .action-buttons {
-  margin-left: 20px; /* Ensures larger spacing between the price and the buttons */
+  margin-left: 20px; 
 }
 
-/* Aligns the name and price properly */
 .list-group-item h5 {
   margin: 0;
   font-size: 1.2rem;
@@ -188,7 +179,6 @@ button:focus {
   color: #333;
 }
 
-/* Small screen adjustments */
 @media (max-width: 768px) {
   .App {
     padding: 15px;

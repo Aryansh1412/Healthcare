@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function ServiceForm({ addService, editService, updateService }) {
-  const [serviceData, setServiceData] = useState({ name: '', description: '', price: '' });
-  const [errors, setErrors] = useState({ name: '', description: '', price: '' });
+  const [serviceData, setServiceData] = useState({
+    name: "",
+    description: "",
+    price: "",
+  });
+  const [errors, setErrors] = useState({
+    name: "",
+    description: "",
+    price: "",
+  });
 
   useEffect(() => {
     if (editService) {
@@ -13,15 +21,17 @@ function ServiceForm({ addService, editService, updateService }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setServiceData({ ...serviceData, [name]: value });
-    setErrors({ ...errors, [name]: '' });
+    setErrors({ ...errors, [name]: "" });
   };
 
   const validateForm = () => {
     const newErrors = {};
-    if (!serviceData.name) newErrors.name = 'Name is required';
-    if (!serviceData.description) newErrors.description = 'Description is required';
-    if (!serviceData.price || serviceData.price <= 0) newErrors.price = 'Price must be greater than zero';
-    
+    if (!serviceData.name) newErrors.name = "Name is required";
+    if (!serviceData.description)
+      newErrors.description = "Description is required";
+    if (!serviceData.price || serviceData.price <= 0)
+      newErrors.price = "Price must be greater than zero";
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -34,7 +44,7 @@ function ServiceForm({ addService, editService, updateService }) {
       } else {
         addService(serviceData);
       }
-      setServiceData({ name: '', description: '', price: '' });
+      setServiceData({ name: "", description: "", price: "" });
     }
   };
 
@@ -50,7 +60,9 @@ function ServiceForm({ addService, editService, updateService }) {
           onChange={handleChange}
           required
         />
-        {errors.name && <small className="form-text text-danger">{errors.name}</small>}
+        {errors.name && (
+          <small className="form-text text-danger">{errors.name}</small>
+        )}
       </div>
       <div className="form-group">
         <label>Description</label>
@@ -62,7 +74,9 @@ function ServiceForm({ addService, editService, updateService }) {
           onChange={handleChange}
           required
         />
-        {errors.description && <small className="form-text text-danger">{errors.description}</small>}
+        {errors.description && (
+          <small className="form-text text-danger">{errors.description}</small>
+        )}
       </div>
       <div className="form-group">
         <label>Price</label>
@@ -74,10 +88,12 @@ function ServiceForm({ addService, editService, updateService }) {
           onChange={handleChange}
           required
         />
-        {errors.price && <small className="form-text text-danger">{errors.price}</small>}
+        {errors.price && (
+          <small className="form-text text-danger">{errors.price}</small>
+        )}
       </div>
       <button type="submit" className="btn btn-primary">
-        {editService ? 'Update Service' : 'Add Service'}
+        {editService ? "Update Service" : "Add Service"}
       </button>
     </form>
   );
